@@ -1,6 +1,7 @@
 const express = require('express')
+const config = require('./config')
 const app = express() //This is an instance of the express method
-const PORT = 3001
+
 
 //MIDDLEWARE
 app.use(express.json())
@@ -28,6 +29,6 @@ app.post("/heroes", (req, res)=>{
     res.end()
 })
 
-app.listen(PORT, ()=> {
-    console.log(`server is listening at port ${PORT}`)
+app.listen(config.port, ()=> {
+    console.log(`server is listening at port ${config.port}`)
 })

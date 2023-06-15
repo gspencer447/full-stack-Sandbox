@@ -12,7 +12,7 @@ if (!envFound){
     throw new Error("cannot find .env")
 }
 
-export default {
+module.exports= {
     mysql: {
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
